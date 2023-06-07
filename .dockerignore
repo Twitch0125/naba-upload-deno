@@ -1,0 +1,11 @@
+node_modules
+extracted
+uploads
+.vscode
+package.json
+pnpm-lock.yaml
+uno.config.js
+Dockerfile
+.dockerignore
+.git
+.gitignore

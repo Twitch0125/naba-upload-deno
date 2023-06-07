@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "uno": "unocss -c uno.config.js --watch",
+    "uno:build": "unocss -c uno.config.js"
+  },
+  "devDependencies": {
+    "@iconify-json/svg-spinners": "^1.1.1",
+    "@iconify-json/tabler": "^1.1.78",
+    "@julr/unocss-preset-forms": "^0.0.5",
+    "@unocss/transformer-variant-group": "^0.53.0",
+    "unocss": "^0.53.0"
+  }
+}
