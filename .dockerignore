@@ -4,7 +4,7 @@ uploads
 .vscode
 package.json
 pnpm-lock.yaml
-uno.config.js
+uno.config.ts
 Dockerfile
 .dockerignore
 .git

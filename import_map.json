@@ -2,7 +2,7 @@
   "imports": {
     "/": "./",
     "./": "./",
-    "html": "./templates/html.js",
+    "html": "./templates/html.ts",
     "templates/": "./templates/",
     "components/": "./templates/components/",
     "htm": "npm:htm",

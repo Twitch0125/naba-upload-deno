@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "uno": "unocss -c uno.config.js --watch",
-    "uno:build": "unocss -c uno.config.js"
+    "uno": "unocss -c uno.config.ts --watch",
+    "uno:build": "unocss -c uno.config.ts"
   },
   "devDependencies": {
     "@iconify-json/svg-spinners": "^1.1.1",

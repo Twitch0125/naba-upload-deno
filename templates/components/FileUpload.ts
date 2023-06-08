@@ -1,5 +1,5 @@
 import { html } from "html";
-import { FilePreview } from "components/FilePreview.js";
+import { FilePreview } from "components/FilePreview.ts";
 
 export const FileUpload = (props) =>
   html` <div class="mt-4 flow-layout items-baseline text-sm">

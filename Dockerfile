@@ -3,6 +3,6 @@ USER deno
 EXPOSE 8000
 WORKDIR /app
 ADD . .
-RUN deno cache main.js
+RUN deno cache main.ts
 ENV AUTH_PASSWORD=test
-CMD ["run", "--allow-read", "--allow-net", "--allow-write", "--allow-env", "--unstable", "main.js"]
+CMD ["run", "--allow-read", "--allow-net", "--allow-write", "--allow-env", "--unstable", "main.ts"]

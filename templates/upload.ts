@@ -1,6 +1,6 @@
 import { html } from "html";
-import { BasePage } from "templates/base.js";
-import { FileUpload } from "components/FileUpload.js";
+import { BasePage } from "templates/base.ts";
+import { FileUpload } from "components/FileUpload.ts";
 
 export const UploadPage = (props = {}) =>
   html`

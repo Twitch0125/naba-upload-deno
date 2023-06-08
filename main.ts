@@ -1,4 +1,4 @@
-import "./env.js";
+import "./env.ts";
 import { Hono, RegExpRouter } from "hono";
 import { basicAuth, compress, serveStatic } from "hono/middleware";
 import { ensureDir, ensureFile } from "fs";
@@ -8,7 +8,7 @@ import {
   readableStreamFromReader,
   readerFromStreamReader,
 } from "streams";
-import { UploadPage } from "templates/upload.js";
+import { UploadPage } from "templates/upload.ts";
 
 const app = new Hono({ router: new RegExpRouter() });
 
@@ -42,7 +42,7 @@ app.post(
     const gzipReader = uploadedFile.readable.pipeThrough(
       new DecompressionStream("gzip"),
     )
-      .getReader()
+      .getReader();
 
     const untar = new Untar(readerFromStreamReader(gzipReader));
     for await (const entry of untar) {
