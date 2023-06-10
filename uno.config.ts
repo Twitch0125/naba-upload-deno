@@ -12,7 +12,7 @@ import { presetForms } from "@julr/unocss-preset-forms";
 export default defineConfig({
   cli: {
     entry: {
-      patterns: ["./templates/**/*.{ts,js}"],
+      patterns: ["./templates/**/*.{ts,js,tsx,jsx}"],
       outFile: "public/uno.css",
     },
   },

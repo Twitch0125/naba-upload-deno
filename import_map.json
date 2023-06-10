@@ -5,13 +5,15 @@
     "html": "./templates/html.ts",
     "templates/": "./templates/",
     "components/": "./templates/components/",
-    "htm": "npm:htm",
-    "vhtml": "npm:vhtml",
     "hono": "https://deno.land/x/hono@v3.2.4/mod.ts",
     "hono/middleware": "https://deno.land/x/hono@v3.2.4/middleware.ts",
     "streams": "https://deno.land/std@0.190.0/streams/mod.ts",
     "archive": "https://deno.land/std@0.190.0/archive/mod.ts",
     "fs": "https://deno.land/std@0.190.0/fs/mod.ts",
-    "dotenv": "https://deno.land/std@0.190.0/dotenv/mod.ts"
+    "dotenv": "https://deno.land/std@0.190.0/dotenv/mod.ts",
+    "preact": "https://esm.sh/preact@10.15.1",
+    "preact/": "https://esm.sh/preact@10.15.1/",
+    "preact-render-to-string": "https://esm.sh/preact-render-to-string@6.1.0",
+    "preact-render-to-string/": "https://esm.sh/preact-render-to-string@6.1.0/"
   }
 }

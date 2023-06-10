@@ -3,20 +3,16 @@ import { Hono, RegExpRouter } from "hono";
 import { basicAuth, compress, serveStatic } from "hono/middleware";
 import { ensureDir, ensureFile } from "fs";
 import { Untar } from "archive";
-import {
-  copy,
-  readableStreamFromReader,
-  readerFromStreamReader,
-} from "streams";
-import { UploadPage } from "templates/upload.ts";
+import { copy, readerFromStreamReader } from "streams";
+import { UploadPage } from "templates/upload.tsx";
+import { render } from "preact-render-to-string";
 
 const app = new Hono({ router: new RegExpRouter() });
-
 app.get(
   "/upload",
   basicAuth({ username: "admin", password: Deno.env.get("AUTH_PASSWORD") }),
   (ctx) => {
-    return ctx.html(UploadPage());
+    return ctx.html(render(UploadPage()));
   },
 );
 app.post(
@@ -27,7 +23,7 @@ app.post(
     /** @type {File} */
     const file = body.get("file");
     if (!file) {
-      return ctx.html(UploadPage({ message: "No file uploaded" }), 400);
+      return ctx.html(render(UploadPage({ message: "No file uploaded" })), 400);
     }
     await ensureDir(Deno.cwd() + "/uploads");
     const fsFile = await Deno.create(Deno.cwd() + "/uploads/report.tar.gz");
@@ -56,7 +52,7 @@ app.post(
       }
     }
     return ctx.html(
-      UploadPage({ message: "Upload successful!" }),
+      render(UploadPage({ message: "Upload successful!" })),
     );
   },
 );

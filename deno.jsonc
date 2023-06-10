@@ -2,5 +2,9 @@
   "tasks": {
     "dev": "deno run -A --unstable --watch main.ts"
   },
-  "importMap": "./import_map.json"
+  "importMap": "./import_map.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  }
 }

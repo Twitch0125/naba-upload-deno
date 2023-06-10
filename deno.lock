@@ -118,7 +118,15 @@
     "https://deno.land/x/hono@v3.2.4/utils/types.ts": "64fe2bf6526c682024bc5d0cd59d01a32f12bb9b80dca58d1cfc4e70231ef696",
     "https://deno.land/x/hono@v3.2.4/utils/url.ts": "40a4192da0a655a124c95063e0ab3924432805fcf45a3ffc8e4458029d609bbc",
     "https://deno.land/x/hono@v3.2.4/validator/index.ts": "6c986e8b91dcf857ecc8164a506ae8eea8665792a4ff7215471df669c632ae7c",
-    "https://deno.land/x/hono@v3.2.4/validator/validator.ts": "e52183ddf8cefc3cfe2788802fe6ce766df8ac904df485107b01cbcca167dbad"
+    "https://deno.land/x/hono@v3.2.4/validator/validator.ts": "e52183ddf8cefc3cfe2788802fe6ce766df8ac904df485107b01cbcca167dbad",
+    "https://esm.sh/preact-render-to-string@6.1.0": "b595d9680bf638d4ab4fcb16b5aed64c8589b63275237f2b9ec9d17a0045efa5",
+    "https://esm.sh/preact@10.13.1/jsx-runtime": "08e780361a282d2c3ecaac894a2b1c73f54f203d82411935554fa182ce722aa3",
+    "https://esm.sh/preact@10.15.1/jsx-runtime": "3a6250cbda44a43ba01c1c0bc8a79ff8cae167be322d24903483f3b367fe5709",
+    "https://esm.sh/stable/preact@10.13.1/denonext/jsx-runtime.js": "7b34dd1d2a953efac4fdab89473d1fb3bf777d8ec2c456e2a23d18256512a3b4",
+    "https://esm.sh/stable/preact@10.13.1/denonext/preact.mjs": "9a6d35a7eb7f3a0367425a507d20bc1006327c546047bb650b356ba9784d069e",
+    "https://esm.sh/stable/preact@10.15.1/denonext/jsx-runtime.js": "52806054f5b3477005ab4bdc17de3d219ccc6c130d0cd803c45667b0cac2f6ed",
+    "https://esm.sh/stable/preact@10.15.1/denonext/preact.mjs": "30710ac1d5ff3711ae0c04eddbeb706f34f82d97489f61aaf09897bc75d2a628",
+    "https://esm.sh/v125/preact-render-to-string@6.1.0/denonext/preact-render-to-string.mjs": "21905f16997f643a161739c4d7905c4d7c5bf643291925b43854f27ae4b17ff5"
   },
   "npm": {
     "specifiers": {
