@@ -42,7 +42,7 @@ app.post(
     const gzipReader = uploadedFile.readable.pipeThrough(
       new DecompressionStream("gzip"),
     )
-      .getReader()
+      .getReader();
 
     const untar = new Untar(readerFromStreamReader(gzipReader));
     for await (const entry of untar) {
@@ -75,10 +75,17 @@ app.get(
   }),
 );
 app.get("/*", compress(), async (ctx, next) => {
-  ctx.header(
-    "Cache-Control",
-    "max-age=86400, stale-while-revalidate=172800, must-revalidate, immutable, must-understand",
-  );
+  if (ctx.req.url.endsWith('.html')) {
+    ctx.header(
+      "Cache-Control",
+      "no-cache",
+    );
+  } else {
+    ctx.header(
+      "Cache-Control",
+      "max-age=86400, stale-while-revalidate=172800, must-revalidate, immutable, must-understand",
+    );
+  }
   await next();
 }, serveStatic({ root: "./extracted/news/html" }));
 
