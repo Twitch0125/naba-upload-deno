@@ -1,7 +1,7 @@
 import { html } from "html";
 
 export const FilePreview = () =>
-  html`<template x-if="file">
+  html`
       <div
         x-data="{dateFormatter: Intl.DateTimeFormat()}"
         class="flex flex-col gap flow-xs"
@@ -32,5 +32,4 @@ export const FilePreview = () =>
             <span>Uploading</span>
           </div>
         </button>
-      </div>
-    </template>`;
+      </div>`;
