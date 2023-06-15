@@ -3,11 +3,7 @@ import { Hono, RegExpRouter } from "hono";
 import { basicAuth, compress, serveStatic } from "hono/middleware";
 import { ensureDir, ensureFile } from "fs";
 import { Untar } from "archive";
-import {
-  copy,
-  readableStreamFromReader,
-  readerFromStreamReader,
-} from "streams";
+import { copy, readerFromStreamReader } from "streams";
 import { UploadPage } from "templates/upload.js";
 
 const app = new Hono({ router: new RegExpRouter() });
@@ -75,11 +71,8 @@ app.get(
   }),
 );
 app.get("/*", compress(), async (ctx, next) => {
-  if (ctx.req.url.endsWith('.html')) {
-    ctx.header(
-      "Cache-Control",
-      "no-cache",
-    );
+  if (ctx.req.url.endsWith(".html")) {
+    ctx.header("Cache-Control", "no-cache");
   } else {
     ctx.header(
       "Cache-Control",
