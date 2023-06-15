@@ -1,5 +1,8 @@
 # Benchmarks
 
+POST: /upload
+~6.6s
+
 oha -z 10s http://localhost:8000/html
 
 Summary:
