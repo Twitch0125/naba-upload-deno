@@ -5,9 +5,10 @@ import { ensureDir, ensureFile } from "fs";
 import { Untar } from "archive";
 import { copy, readerFromStreamReader } from "streams";
 import { UploadPage } from "templates/upload.js";
+import { TestPage } from "templates/test.js";
 
 const app = new Hono({ router: new RegExpRouter() });
-
+app.get("/html", (ctx) => ctx.html(TestPage()));
 app.get(
   "/upload",
   basicAuth({ username: "admin", password: Deno.env.get("AUTH_PASSWORD") }),
