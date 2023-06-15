@@ -6,8 +6,10 @@ import { Untar } from "archive";
 import { copy, readerFromStreamReader } from "streams";
 import { UploadPage } from "templates/upload.tsx";
 import { render } from "preact-render-to-string";
+import { TestPage } from "templates/test.tsx";
 
 const app = new Hono({ router: new RegExpRouter() });
+app.get("/html", (ctx) => ctx.html(render(TestPage())));
 app.get(
   "/upload",
   basicAuth({ username: "admin", password: Deno.env.get("AUTH_PASSWORD") }),
