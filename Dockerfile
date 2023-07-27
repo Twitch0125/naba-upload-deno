@@ -1,4 +1,4 @@
-FROM docker.io/lukechannings/deno
+FROM docker.io/denoland/deno
 USER deno
 EXPOSE 8000
 WORKDIR /app

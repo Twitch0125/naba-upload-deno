@@ -83,4 +83,4 @@ app.get("/*", compress(), async (ctx, next) => {
   await next();
 }, serveStatic({ root: "./extracted/news/html" }));
 
-await Deno.serve({ port: 8000 }, app.fetch);
+await Deno.serve({ port: 8000 }, app.fetch).finished
